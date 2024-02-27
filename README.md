@@ -1,6 +1,6 @@
 
 # As respostas foram preparadas com base nas perguntas contidas no documento PDF correspondente, o qual foi encaminhado no corpo do e-mail. Para facilitar o acesso, você também pode encontrar o documento anexado a este repositório.
-## Algumas perguntas envolviam a elaboração e depuração de código para fins de teste e análise.
+## Algumas perguntas envolviam a elaboração e depuração de código para fins de teste e análise, então resolvi versionar tudo que foi realizado + os algorítimos solicitados no Github.
 ## Abaixo você encontrará informações sobre o projeto solicitado na Questão de número 11.
 
 # React + Vite
