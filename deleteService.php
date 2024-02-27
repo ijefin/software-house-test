@@ -1,13 +1,26 @@
 <?php
 // Função para deletar um registro de uma tabela no banco de dados SQL Server
-function deletarRegistro($conexao, $tabela, $condicao) {
-    $query = "DELETE FROM $tabela WHERE $condicao";
+function deletarRegistro($conexao, $tabela, $id) {
+    // Solicitar o ID se não for fornecido
+    if ($id === null) {
+        echo "Por favor, forneça o ID do registro que deseja deletar.\n";
+        return;
+    }
 
-    if (sqlsrv_query($conexao, $query)) {
-        echo "Registro deletado com sucesso!";
+    // Evitar possíveis ataques de SQL injection utilizando prepared statements
+    $query = "DELETE FROM $tabela WHERE id = ?";
+    $params = array($id);
+
+    $stmt = sqlsrv_prepare($conexao, $query, $params);
+
+    if (sqlsrv_execute($stmt)) {
+        echo "Registro com ID $id deletado com sucesso!\n";
     } else {
         echo "Erro ao deletar o registro: " . print_r(sqlsrv_errors(), true);
     }
+
+    // Fechar a declaração preparada
+    sqlsrv_free_stmt($stmt);
 }
 
 // Exemplo de uso
@@ -27,7 +40,7 @@ if (!$conexao) {
 }
 
 // Exemplo de chamada da função
-deletarRegistro($conexao, 'NomeDaTabela', 'coluna_id = 1');
+deletarRegistro($conexao, 'NomeDaTabela', 1); // Substitua 1 pelo ID desejado
 
 // Fecha a conexão
 sqlsrv_close($conexao);
