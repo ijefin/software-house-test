@@ -1,5 +1,5 @@
 
-# As respostas foram preparadas com base nas perguntas contidas no documento PDF correspondente, o qual foi encaminhado no corpo do e-mail. Para facilitar o acesso, você também pode encontrar o documento anexado a este repositório.
+# As respostas foram elaboradas com base nas perguntas presentes no documento PDF correspondente, que foi enviado no corpo do e-mail. Você pode acessar o documento anexado a este repositório para facilitar a leitura e referência.
 ## Algumas perguntas envolviam a elaboração e depuração de código para fins de teste e análise, então resolvi versionar tudo que foi realizado + os algorítimos solicitados no Github.
 ## Abaixo você encontrará informações sobre o projeto solicitado na Questão de número 11.
 
